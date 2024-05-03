@@ -49,8 +49,8 @@ def create_user():
 # method for text
 def geminiMethod():
     print ("Inside Gemini")
-    # genai.configure(api_key="AIzaSyDSPnAruCOszgDjbWXbvGPqHvTpaxX2YXk")
-    genai.configure(api_key="AIzaSyDMPte9Urqo0_tH91cFyBgZh4lFqdW3eQY")
+   
+    genai.configure(api_key="<your key here>")
     
 
     # Set up the model
@@ -107,7 +107,7 @@ def audioVideo():
     video = VideoFileClip(video_file_uri)
 
     video.audio.write_audiofile("example.mp3")
-    genai.configure(api_key="AIzaSyDSPnAruCOszgDjbWXbvGPqHvTpaxX2YXk")
+    genai.configure(api_key="<your key here>")
 
     your_file = genai.upload_file(path="./example.mp3")
 
@@ -158,7 +158,7 @@ def audioVideo():
 # method for Audio and Video Analysis
 def imageMethod():
     print("inside image")
-    genai.configure(api_key="AIzaSyDSPnAruCOszgDjbWXbvGPqHvTpaxX2YXk")
+    genai.configure(api_key="<your key here>")
 
     prompt = "Act like a quality assurance professional, responsible for the final checks on the quality of product. Could you please have a check on the product and share your review. you can also get the help of the text, if available with the image"
     model = genai.GenerativeModel('models/gemini-1.5-pro-latest')
